@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress open --e2e -b electron",
+    "testing": "npx cypress open --e2e -b electron --config baseUrl=https://pushing-front.vercel.app",
+    "desarrollo": "npx cypress open --e2e -b electron --config baseUrl=https://pushing-it.vercel.app"
   },
   "keywords": [],
   "author": "",
