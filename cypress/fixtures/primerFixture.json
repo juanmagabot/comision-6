@@ -1,0 +1,16 @@
+{
+    "test1": {
+        "loginData": {
+            "usuario": "pushingit",
+            "contraseña": "123456!"
+        },
+        "tareas": {
+            "tarea": "Tarea 1"
+        }
+    },
+    "test2": {
+        "usuario": "pushingit2",
+        "contraseña": "123456!",
+        "tarea": "Tarea 1"
+    }
+}
