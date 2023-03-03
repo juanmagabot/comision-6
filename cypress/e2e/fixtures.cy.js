@@ -28,6 +28,6 @@ describe('Fixtures', () => {
         cy.contains('Log in').click();
         cy.contains('To Do List').click();
         cy.get('#task').type(`${loginData.test2.tarea} {enter}`);
-        cy.contains(loginData.test2.tarea).siblings('button');
+        cy.xpath(`//p[contains(text(),'${loginData.test2.tarea}']`).siblings('button');
     });
 });
