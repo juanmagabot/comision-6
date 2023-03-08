@@ -37,5 +37,4 @@ describe('Aserciones', () => {
         cy.esperaCirculodeCarga();
         cy.get('#message').should('have.text', 'You have waited for ten seconds, CONGRATULATIONS');
     })
-   
 });

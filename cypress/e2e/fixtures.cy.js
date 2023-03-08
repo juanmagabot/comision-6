@@ -22,12 +22,12 @@ describe('Fixtures', () => {
         cy.get('#task').type(`${loginData.test1.tareas.tarea} {enter}`);
     });
 
-    it('Deberia ingresar al sistema con otros datos validos, agregar una tarea y eliminarla', () => {
-        cy.get('#user').type(loginData.test2.usuario);
+    it.only('Deberia ingresar al sistema con otros datos validos, agregar una tarea y eliminarla', () => {
+        cy.get('#user').type(loginData.test1.loginData.usuario);
         cy.get('#pass').type(loginData.test2.contraseña);
         cy.contains('Log in').click();
         cy.contains('To Do List').click();
         cy.get('#task').type(`${loginData.test2.tarea} {enter}`);
-        cy.xpath(`//p[contains(text(),'${loginData.test2.tarea}']`).siblings('button');
-    });
+        cy.xpath(`//p[contains(text(),'${loginData.test2.tarea}')]`).siblings('button').click();;
+    })
 });
