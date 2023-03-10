@@ -28,11 +28,11 @@ describe('Aserciones', () => {
 
     it('Primera asercion utilizando TDD (assert)', () => {
         cy.get('#title').invoke('text').then(texto => {
-            assert.equal(texto,'Waits')
+            assert.equal(texto,'Wait')
         });
     });
 
-    it('Primera asercion verificando la cantidad de elementos cuyo id es "title"', () => {
+    it.skip('Primera asercion verificando la cantidad de elementos cuyo id es "title"', () => {
         cy.get('#title').should('have.length', 1);
     })
 

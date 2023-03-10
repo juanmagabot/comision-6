@@ -6,13 +6,17 @@
   "scripts": {
     "test": "npx cypress open --e2e -b electron",
     "testing": "npx cypress open --e2e -b electron --config baseUrl=https://pushing-front.vercel.app",
-    "desarrollo": "npx cypress open --e2e -b electron --config baseUrl=https://pushing-it.vercel.app"
+    "desarrollo": "npx cypress open --e2e -b electron --config baseUrl=https://pushing-it.vercel.app",
+    "spec": "npx cypress run --spec 'cypress/e2e/aserciones.cy.js'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.3.0",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.2",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

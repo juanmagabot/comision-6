@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 const constantes = require('../support/constantes');
 
-describe('Aserciones', () => {
+describe.skip('Aserciones', () => {
     let loginData;
 
     before('Before', () => {

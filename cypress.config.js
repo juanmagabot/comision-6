@@ -9,4 +9,11 @@ module.exports = defineConfig({
     watchForFileChanges: false,
     defaultCommandTimeout: 4000,
   },
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/results',
+    overwrite: true,
+    html: true,
+    json: true,
+  },
 });

@@ -22,7 +22,7 @@ describe('Fixtures', () => {
         cy.get('#task').type(`${loginData.test1.tareas.tarea} {enter}`);
     });
 
-    it.only('Deberia ingresar al sistema con otros datos validos, agregar una tarea y eliminarla', () => {
+    it('Deberia ingresar al sistema con otros datos validos, agregar una tarea y eliminarla', () => {
         cy.get('#user').type(loginData.test1.loginData.usuario);
         cy.get('#pass').type(loginData.test2.contraseña);
         cy.contains('Log in').click();
