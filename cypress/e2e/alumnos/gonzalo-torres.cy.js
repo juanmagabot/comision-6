@@ -9,14 +9,12 @@ describe('Desafío 4 - Pushing IT - Torres Gonzalo', () => {
         const day = "3";
         const month = "April";
         const year = "1981";
-        let numero = Math.floor(Math.random() * 10000);
-        let respuesta;
-        
+                        
         cy.request({
             url: 'https://pushing-it.onrender.com/api/register',
             method: 'POST',
             body: {
-                username: username + numero,
+                username: username,
                 password: password,
                 gender: gender,
                 day: day,
@@ -24,19 +22,18 @@ describe('Desafío 4 - Pushing IT - Torres Gonzalo', () => {
                 year: year
             },
         }).then(response => {
-            //cy.log(respuesta);
             expect(response.status).equal(200);
             cy.request({
                 url: 'https://pushing-it.onrender.com/api/login',
                 method: 'POST',
                 body: {
-                    username: username + numero,
+                    username: username,
                     password: password
                 },
             }).then(response => {
                 expect(response.status).equal(200);
                 cy.request({
-                    url: `https://pushing-it.onrender.com/api/deleteuser/${username + numero}`,
+                    url: `https://pushing-it.onrender.com/api/deleteuser/${username}`,
                     method: 'DELETE',
                 }).then(response => {
                     expect(response.status).equal(200);
